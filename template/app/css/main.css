@@ -1,0 +1,28 @@
+body {
+  background-color: white;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.tariffs {
+  margin: 0 auto;
+  width: 100%; }
+  .tariffs .tariff {
+    cursor: pointer;
+    position: relative;
+    padding: rem-calc(30) rem-calc(100) rem-calc(15) rem-calc(15);
+    margin: rem-calc(10) 0 rem-calc(20);
+    background: gray;
+    -webkit-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 8px 0 0 #e9ebee;
+            box-shadow: 0 8px 0 0 #e9ebee; }
+    .tariffs .tariff p {
+      line-height: 1.4; }
+    .tariffs .tariff span {
+      font-size: rem-calc(30);
+      font-weight: bold;
+      position: absolute;
+      right: 10px;
+      bottom: 0px; }

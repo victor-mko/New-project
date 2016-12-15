@@ -1,0 +1,30 @@
+body {
+	background-color: white;
+	display: flex;
+} 
+.tariffs {
+        margin: 0 auto;
+        width: 100%;
+
+        .tariff {
+                cursor: pointer;
+                position: relative;
+                padding: rem-calc(30) rem-calc(100) rem-calc(15) rem-calc(15);
+                margin: rem-calc(10) 0 rem-calc(20); 
+                background: gray;
+                border-radius: 5px;
+                box-shadow: 0 8px 0 0 #e9ebee;
+
+                p {
+                    line-height: 1.4;
+                }
+ 
+                span {
+                    font-size: rem-calc(30);
+                    font-weight: bold;
+                    position: absolute;
+                    right: 10px;
+                    bottom: 0px;
+                }
+            }
+        }
