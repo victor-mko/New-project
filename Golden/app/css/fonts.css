@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'WisdomScriptAJ';
+  src: url("../fonts/WisdomScriptAJ.eot");
+  src: local("WisdomScriptAJ"), url("../fonts/WisdomScriptAJ.woff") format("woff"), url("../fonts/WisdomScriptAJ.ttf") format("truetype"); }
+
+.WisdomScriptAJ {
+  font-family: 'WisdomScriptAJ' !important; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?o4d1c6");
+  src: url("../fonts/icomoon.eot?o4d1c6#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?o4d1c6") format("truetype"), url("../fonts/icomoon.woff?o4d1c6") format("woff"), url("../fonts/icomoon.svg?o4d1c6#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-twitter:before {
+  content: "\f099"; }
+
+.icon-facebook:before {
+  content: "\f09a"; }
+
+.icon-facebook-f:before {
+  content: "\f09a"; }
+
+.icon-linkedin:before {
+  content: "\f0e1"; }
