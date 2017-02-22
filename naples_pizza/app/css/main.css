@@ -52,4 +52,15 @@ table {
   font-family: 'lc_chalkregular'; }
 
 body {
-  background-color: gray; }
+  background: #282828 url(../img/bg-body.jpg) left top repeat;
+  font-family: 'Pangolin', cursive;
+  font-size: 18px;
+  color: #e8f6ff;
+  line-height: 1.6; }
+
+header {
+  padding-top: 20px; }
+  header .header-contact {
+    color: white;
+    font-size: 0.77778em;
+    line-height: 1.2; }

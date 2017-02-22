@@ -1,9 +1,0 @@
-@font-face {
-  font-family: 'lc_chalkregular';
-  src: url("../fonts/lcchalk_-webfont.eot");
-  src: url("../fonts/lcchalk_-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/lcchalk_-webfont.woff2") format("woff2"), url("../fonts/lcchalk_-webfont.woff") format("woff"), url("../fonts/lcchalk_-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-.lc_chalk {
-  font-family: 'lc_chalkregular'; }
