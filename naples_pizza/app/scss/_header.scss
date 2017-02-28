@@ -1,8 +1,44 @@
 header {
-	padding-top: 20px;
+	padding-top: rem(20);
 	.header-contact {
-		color: white;
-		font-size: em(14);
+		color: $base-color;
+		font-size: rem(14);
 		line-height: 1.2;
-	} 
-}
+		margin-bottom: rem(60);
+	}
+	nav {
+		position: relative;
+		font-family: 'lc_chalkregular';
+		ul {
+			li {
+				text-align: center;
+				a:hover {
+					text-decoration: none;
+					border-bottom: 2px solid $special-color;
+					color: $special-color;
+				}
+			}
+			li.logo-box {
+				text-align: justify;
+				position: relative;
+				img {
+					position: absolute;
+					top: rem(-100);
+				}
+			}
+		}
+	}
+} 
+
+.home-box {
+	h1 {
+		padding: rem(150) 0 rem(35);
+		display: block;
+	}
+
+	.home-image {
+		img {
+			width: 75%;
+		}
+	}
+} 

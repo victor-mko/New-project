@@ -3,4 +3,123 @@
 @import "fonts";
 @import "global";
 @import "header";
+@import "slider";
 @import "footer";
+
+.block-box {
+	margin: rem(100) 0 rem(150);
+	h2 {		
+		margin-bottom: rem(100);
+		display: block;
+		position: relative;
+		.left-icon, .right-icon {
+			display: block;
+			position: absolute;
+			top: rem(-22);
+		}
+		.left-icon {
+			left: rem(30);
+		}
+		.right-icon {
+			right: rem(30);
+		}
+	}
+	h3 {
+		margin-bottom: rem(60);
+	}
+}
+
+hr {
+	display: inline-block;
+	background-color: white;
+	width: rem(37);
+	height: rem(2);
+	margin: rem(-10) 0 0;
+	vertical-align: middle;
+}
+
+.left-head-line {
+	margin-right: rem(15);
+}
+.right-head-line {
+	margin-left: rem(15);
+}
+
+//////////// About Block \\\\\\\\\\\\\\\\\
+
+.about-box {
+	
+}
+
+
+//////////// Actions Block \\\\\\\\\\\\\\\\\
+
+.actions-box {
+	h2 {
+		.left-icon {
+			top: rem(-3);
+		}
+		.right-icon	{
+			top: rem(-6);
+		}
+	}
+	ul {
+		li {
+			padding: 0 15px;
+			overflow: hidden;
+			a {
+				display: block;
+				text-align: right;
+				&:hover {
+					text-decoration: underline;
+					color: white;
+				}
+			}
+			a.actions-img {
+				border: rem(5) solid white;
+				border-image: url(../img/border-img-2.png) 5 round;
+				overflow: hidden;
+				img {
+					vertical-align: middle;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+
+//////////// Contact Block \\\\\\\\\\\\\\\\\
+
+.contact-box {
+	h2 {
+		.left-icon {
+			top: rem(-3);
+		}
+		.right-icon	{
+			top: rem(-6);
+		}
+	}
+
+	.map {		
+	  	height: 400px;
+		#map { height: 100%;
+		border: rem(5) solid white;
+		border-image: url(../img/border-img-2.png) 5 round; }
+	}
+	.contact-text {
+		color: $special-color;
+		.contact-phone {
+			color: #7cb02a;
+		}
+		.contact-mail {
+			color: #78aaef;
+		}
+		a {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+

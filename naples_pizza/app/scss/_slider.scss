@@ -1,0 +1,11 @@
+.slider-box {
+	padding: 0;
+	margin-top: rem(60);
+	border: rem(10) solid white;
+	border-image: url(../img/border-img-2.png) 10 round;
+}
+
+.carousel {
+	max-height: rem(600);
+	overflow: hidden;
+}

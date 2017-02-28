@@ -1,15 +1,41 @@
 $base-font-size: 18;
 $base-font: $base-font-size + px;
 
-@function em($px, $base: $base-font-size) {
-    @return ($px / $base) + em;
-};
+$special-color: #e8f6ff;
+$base-color: white;
 
+@function rem($px, $base: $base-font-size) {
+    @return ($px / $base) + rem;
+};
+ html, body { height: 100%; margin: 0; padding: 0; }
 
 body {
 	background: #282828 url(../img/bg-body.jpg) left top repeat;
 	font-family: 'Pangolin', cursive;
 	font-size: $base-font;
-	color: #e8f6ff;
+	color: $base-color;
 	line-height: 1.6;
-} 
+	text-align: center;
+}
+
+a {
+	color: $special-color;
+}
+
+h1, h2, h3 {
+	font-family: 'lc_chalkregular';
+	color: white;
+}
+
+h1 {
+	font-size: rem(34);
+	line-height: 1;
+}
+
+h2 {
+	font-size: rem(30);
+}
+
+h3 {
+	font-size: rem(26)
+}
