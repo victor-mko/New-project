@@ -1,10 +1,15 @@
 footer {
 	background-color: #000;
 	ul {
-		padding: rem(50) 0 rem(40);
+		padding: rem(25) 0 rem(40);
 		li {
 			a {
-
+				&:hover {
+					text-decoration: none;
+					border-bottom: 2px solid white;
+					color:white;
+					font-weight: bold;
+				}
 			}
 		}
 	}

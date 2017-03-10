@@ -39,3 +39,88 @@ h2 {
 h3 {
 	font-size: rem(26)
 }
+
+
+.nav {
+	position: relative;
+	font-family: 'lc_chalkregular';
+	li {
+	text-align: center;
+			a:hover {
+				text-decoration: none;
+				border-bottom: 2px solid $special-color;
+				color: white;
+				font-weight: bold;
+			}
+	}
+}
+
+.block-box {
+	margin: rem(100) 0 rem(75);
+	h2 {	
+		padding-top: rem(75);	
+		margin-bottom: rem(100);
+		display: block;
+		position: relative;
+		.left-icon, .right-icon {
+			display: block;
+			position: absolute;
+			top: rem(53);
+		}
+		.left-icon {
+			left: rem(30);
+		}
+		.right-icon {
+			right: rem(30);
+		}
+	}
+	h3 {
+		margin-bottom: rem(60);
+	}
+}
+
+hr {
+	display: inline-block;
+	background-color: white;
+	width: rem(37);
+	height: rem(2);
+	margin: rem(-10) 0 0;
+	vertical-align: middle;
+}
+
+.left-head-line {
+	margin-right: rem(15);
+}
+.right-head-line {
+	margin-left: rem(15);
+}
+body {
+	.dropdown {
+		.dropdown-menu {
+			background-color: rgba(0,0,0,0.8);
+			li {
+				text-align: center;
+				width: 100%;
+				padding: 5px !important;
+				span {
+					font-size: rem(22);
+					font-weight: bold;
+					padding-bottom: rem(10);
+				}
+				a {
+					color: white;
+					font-size: rem(18);
+					color: $special-color;
+				}
+				&:hover {
+					a {
+						color: black;
+					}
+				}
+			}
+			li.menu-type {
+				border-bottom: 2px solid white;
+			}
+		}
+	}
+}

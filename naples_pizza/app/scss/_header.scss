@@ -1,30 +1,91 @@
 header {
 	padding-top: rem(20);
+	.navbar-fixed-top .navbar-collapse {
+			max-height: auto;
+		
+	}
 	.header-contact {
 		color: $base-color;
 		font-size: rem(14);
 		line-height: 1.2;
-		margin-bottom: rem(60);
+		margin-bottom: rem(40);
+		padding-top: rem(20);
 	}
-	nav {
-		position: relative;
-		font-family: 'lc_chalkregular';
-		ul {
-			li {
-				text-align: center;
-				a:hover {
-					text-decoration: none;
-					border-bottom: 2px solid $special-color;
-					color: $special-color;
+	.navbar-brand {
+		float: left;
+	    padding: 10px 30px;
+	    font-size: 18px;
+	    line-height: 20px;
+	    height: 100px;
+	    overflow: hidden;
+	    img {
+	    	width: 180px
+	    }
+	}
+	.navbar-nav {
+		float: none;
+		.open {
+			.dropdown-menu {
+				background-color: rgba(0,0,0,1);
+				li {
+					a {
+						color: $special-color;
+					}
 				}
 			}
-			li.logo-box {
-				text-align: justify;
-				position: relative;
-				img {
-					position: absolute;
-					top: rem(-100);
+		}
+	}
+	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+		background: transparent;
+	}
+	.navbar-default {
+		background-color: rgba(0,0,0,0.4);
+		border: none;
+		.navbar-toggle {
+			margin-top: 33px;
+			border: none;
+			&:hover, &:focus {
+				background-color: transparent;
+			}
+			&:hover {
+				span {
+					height: 3px;
 				}
+			}
+			.icon-bar {
+				background-color: #fff;
+				width: 35px;
+				& + .icon-bar {
+					margin-top: 6px;
+				}
+			}
+		}
+		.navbar-collapse {
+			max-height: 100% !important;
+			height: auto;
+			&.in {
+				overflow: hidden;
+			}
+		}
+		& .navbar-nav {
+			li {
+				a {
+					color: $special-color;
+					&:hover {
+						color: white;
+						border: none;
+						font-weight: bold;
+					}
+				}
+			}
+		}
+		li.logo-box {
+			text-align: justify;
+			position: relative;
+			img {
+				position: absolute;
+				bottom: 0;
+				width: 85%;
 			}
 		}
 	}
@@ -41,4 +102,4 @@ header {
 			width: 75%;
 		}
 	}
-} 
+}
