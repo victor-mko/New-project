@@ -196,8 +196,8 @@ header {
     color: white;
     font-size: 0.77778rem;
     line-height: 1.2;
-    margin-bottom: 2.22222rem;
-    padding-top: 1.11111rem; }
+    margin-bottom: 1.11111rem;
+    padding-top: 1.66667rem; }
   header .navbar-brand {
     float: left;
     padding: 10px 30px;
@@ -213,8 +213,14 @@ header {
       background-color: black; }
       header .navbar-nav .open .dropdown-menu li a {
         color: #e8f6ff; }
+        header .navbar-nav .open .dropdown-menu li a:hover, header .navbar-nav .open .dropdown-menu li a:focus {
+          background: transparent; }
   header .navbar-default .navbar-nav > .open > a, header .navbar-default .navbar-nav > .open > a:hover, header .navbar-default .navbar-nav > .open > a:focus {
     background: transparent; }
+    header .navbar-default .navbar-nav > .open > a:focus, header .navbar-default .navbar-nav > .open > a:hover:focus, header .navbar-default .navbar-nav > .open > a:focus:focus {
+      color: white; }
+  header .navbar-default .navbar-nav li a:focus, header .navbar-default .navbar-nav li a:active, header .navbar-default .navbar-nav li a:visited {
+    color: white; }
   header .navbar-default {
     background-color: rgba(0, 0, 0, 0.4);
     border: none; }
@@ -269,18 +275,11 @@ header {
   overflow: hidden; }
 
 footer {
-  background-color: #000; }
-  footer ul {
-    padding: 1.38889rem 0 2.22222rem; }
-    footer ul li a:hover {
-      text-decoration: none;
-      border-bottom: 2px solid white;
-      color: white;
-      font-weight: bold; }
+  background-color: #000;
+  padding: 25px 15px; }
   footer p {
     font-size: 0.66667rem;
-    text-align: center;
-    padding-bottom: 0.55556rem; }
+    text-align: center; }
 
 @media screen and (max-width: 991px) {
   header .header-contact {
@@ -316,10 +315,18 @@ footer {
     padding-top: 1.38889rem; } }
 
 @media screen and (max-width: 767px) {
+  h1 {
+    font-size: 1.33333rem; }
+  h2 {
+    font-size: 1.22222rem; }
+  h3 {
+    font-size: 1.11111rem; }
   header .navbar-default {
     background-color: rgba(0, 0, 0, 0.4); }
     header .navbar-default .navbar-nav .open .dropdown-menu > li > a {
       color: #e8f6ff; }
+  .about p {
+    font-size: 0.77778rem; }
   footer {
     padding: 1.38889rem 0.83333rem 0.55556rem; } }
 
@@ -367,6 +374,21 @@ footer {
     .actions-box ul li a.actions-img img {
       vertical-align: middle;
       width: 100%; }
+  .actions-box ul li .see-more-details {
+    background-color: transparent;
+    display: block;
+    text-align: left;
+    border: none;
+    width: 100%; }
+    .actions-box ul li .see-more-details:hover {
+      text-decoration: underline;
+      color: white; }
+
+.popover {
+  max-width: 500px;
+  width: 100%; }
+  .popover .popover-content {
+    background-color: #000; }
 
 .contact-box h2 .left-icon {
   top: 2.22222rem; }
@@ -375,7 +397,8 @@ footer {
   top: 2.72222rem; }
 
 .contact-box .map {
-  height: 400px; }
+  height: 400px;
+  padding: 0; }
   .contact-box .map #map {
     height: 100%;
     border: 0.27778rem solid white;

@@ -8,7 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Pangolin&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/libs.css">
+    <link rel="stylesheet" href="css/libs.min.css">
     <link rel="stylesheet" href="css/main.css">
 
 </head>
@@ -106,7 +106,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav row">
                             <li class="col-sm-3 col-md-2">
-                                <a href="#about">О НАС</a>
+                                <a class="scrollto" href="#about">О НАС</a>
                             </li>
                             <li class="col-sm-3 col-md-2 dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -143,15 +143,15 @@
                                 </ul>
                             </li>
                             <li class="col-md-4 logo-box">
-                                <a href="#top">
+                                <a class="scrollto" href="#top">
                                     <img src="img/logo.png" alt="">
                                 </a>
                             </li>
                             <li class="col-sm-3 col-md-2">
-                                <a href="#actions">АКЦИИ</a>
+                                <a class="scrollto" href="#actions">АКЦИИ</a>
                             </li>
                             <li class="col-sm-3 col-md-2">
-                                <a href="#contact">КОНТАКТЫ</a>
+                                <a class="scrollto" href="#contact">КОНТАКТЫ</a>
                             </li>
                         </ul>
                     </div>
@@ -230,27 +230,25 @@
             НОВОСТИ И АКЦИИ
             <hr class="right-head-line hidden-xs hidden-sm">
             <img class="right-icon hidden-xs hidden-sm" src="img/icon-sale.png" alt=""></h2>
-        <h3>
-            Работает ДОСТАВКА!!!
-            <br>
-            от 300 грн.
-            <br>СОВЕРШЕННО БЕСПЛАТНО!!!</h3>
+        <h3>Работает ДОСТАВКА!!!<br>от 300 грн.<br>СОВЕРШЕННО БЕСПЛАТНО!!!</h3>
 
         <ul>
             <li class="col-md-4 col-xs-12">
                 <a href="" class="actions-img">
-                    <img src="img/actions-sv.jpg" alt=""></a>
-                <a href="" class="see-more-details">Узнать больше...</a>
+                    <img src="img/actions-sv.jpg" alt="">
+                </a>
+                <button type="button" class="see-more-details" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Узнать больше...</button>
             </li>
             <li class="col-md-4 col-xs-12">
                 <a href="" class="actions-img">
-                    <img src="img/actions-pizza-size.jpg" alt=""></a>
-                <a href="" class="see-more-details">Узнать больше...</a>
+                    <img src="img/actions-pizza-size.jpg" alt="">
+                </a>
+                <button type="button" class="see-more-details" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Узнать больше...</button>
             </li>
             <li class="col-md-4 col-xs-12">
                 <a href="" class="actions-img">
                     <img src="img/actions-free.jpg" alt=""></a>
-                <a href="" class="see-more-details">Узнать больше...</a>
+                <button type="button" class="see-more-details" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus. Vivamus sagittis lacus vel augue laoreet rutrum faucibus.Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="" title="">Узнать больше...</button>
             </li>
         </ul>
     </div>
@@ -269,31 +267,7 @@
             <div id="map"></div>
         </div>
         <div class="col-md-4 col-xs-12 contact-text text-left">
-            Пиццерия «Неаполь»
-            <br>
-            м. Полтава ,вул . Соборності 46В
-            <br>
-            Навпроти стадіона "Ворскла"
-            <br>
-            тел.
-            <span class="contact-phone"> <i class="icon-phone"></i>
-                0502195643
-            </span>
-            <br>
-            Время работы:
-            <br>
-            пн - вс  с 10:00 до 23:00s
-            <br>
-            Наш электронный адрес:
-            <br>
-            <span class="contact-mail"> <i class="icon-envelop"></i>
-                neapol@gmail.com
-            </span>
-            <br>
-            <br>
-            Мы в социальных сетях:
-            <br>
-            <br>
+        Пиццерия «Неаполь»<br>м. Полтава ,вул . Соборності 46В<br>Навпроти стадіона "Ворскла"<br>тел. <span class="contact-phone"> <i class="icon-phone"></i> 0502195643</span><br>Время работы:<br>пн - вс  с 10:00 до 23:00<br>Наш электронный адрес:<br> <span class="contact-mail"> <i class="icon-envelop"></i> neapol@gmail.com</span><br><br>Мы в социальных сетях:<br><br>
             <a href="">
                 <i class="icon-facebook"></i>
             </a>
@@ -308,30 +282,16 @@
 
 </div>
 <footer class="container-fluid">
-    <nav class="row hidden-xs">
-        <ul class="nav nav-footer">
-            <li class="col-xs-3">
-                <a href="#about">О НАС</a>
-            </li>
-            <li class="col-xs-3">
-                <a href="">МЕНЮ</a>
-            </li>
-            <li class="col-xs-3">
-                <a href="#actions">АКЦИИ</a>
-            </li>
-            <li class="col-xs-3">
-                <a href="#contact">КОНТАКТЫ</a>
-            </li>
-        </ul>
-    </nav>
     <p>© 2017 НЕАПОЛЬ</p>
 </footer>
-<script type="text/javascript" src="js/libs.min.js"></script>
-<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/all.min.js"></script>
+<!-- <script type="text/javascript" src="js/common.js"></script>
 <script type="text/javascript" src="js/carousel.js"></script>
 <script type="text/javascript" src="js/collapse.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
 <script type="text/javascript" src="js/dropdown.js"></script>
+<script type="text/javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/popover.js"></script> -->
 <script async defer  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHtp0AgY9YNNsKVuctmkBvddafIYrKRAQ&callback=initMap"></script>
 
 </body>

@@ -68,6 +68,15 @@
 
  
 @media screen and (max-width: 767px) {
+	h1 {
+		font-size: rem(24);
+	}
+	h2 {
+		font-size: rem(22);
+	}
+	h3 {
+		font-size: rem(20);
+	}
 	header {
 		.navbar-default {
 			background-color: rgba(0,0,0,0.4);
@@ -76,6 +85,11 @@
 			}
 		}
 
+	}
+	.about {
+		p {
+			font-size: rem(14);
+		}
 	}
 	
 	footer {

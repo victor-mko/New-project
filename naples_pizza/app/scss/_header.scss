@@ -1,15 +1,14 @@
 header {
 	padding-top: rem(20);
 	.navbar-fixed-top .navbar-collapse {
-			max-height: auto;
-		
+		max-height: auto;
 	}
 	.header-contact {
 		color: $base-color;
 		font-size: rem(14);
 		line-height: 1.2;
-		margin-bottom: rem(40);
-		padding-top: rem(20);
+		margin-bottom: rem(20);
+		padding-top: rem(30);
 	}
 	.navbar-brand {
 		float: left;
@@ -30,6 +29,9 @@ header {
 				li {
 					a {
 						color: $special-color;
+						&:hover, &:focus {
+							background: transparent;
+						}
 					}
 				}
 			}
@@ -37,6 +39,14 @@ header {
 	}
 	.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
 		background: transparent;
+		&:focus {
+			color: white;
+		}
+	}
+	.navbar-default .navbar-nav li {
+		a:focus, a:active, a:visited {
+			color: white;
+		}
 	}
 	.navbar-default {
 		background-color: rgba(0,0,0,0.4);

@@ -8,8 +8,6 @@
 @import "media";
 
 
-
-
 ////////////////Menu-Modal\\\\\\\\\\\
 
 .modal {
@@ -50,6 +48,7 @@
 		li {
 			padding: 0 15px;
 			overflow: hidden;
+
 			a {
 				display: block;
 				text-align: right;
@@ -67,10 +66,27 @@
 					width: 100%;
 				}
 			}
-		}
+			.see-more-details {
+				background-color: transparent;
+			    display: block;
+			    text-align: left;
+			    border: none;
+			    width: 100%;
+				&:hover {
+					text-decoration: underline;
+					color: white;
+				}
+			}
+		}	
 	}
 }
-
+.popover {
+	max-width: 500px; 
+	width: 100%;
+	.popover-content {
+		background-color: #000;
+	}
+}
 
 //////////// Contact Block \\\\\\\\\\\\\\\\\
 
@@ -86,6 +102,7 @@
 
 	.map {		
 	  	height: 400px;
+	  	padding: 0;
 		#map { height: 100%;
 		border: rem(5) solid white;
 		border-image: url(../img/border-img-2.png) 5 round; }

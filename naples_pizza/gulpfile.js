@@ -20,17 +20,6 @@ gulp.task('sass', function(){
 	.pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {cascade: true}))
 	.pipe(gulp.dest('app/css')) //указываем путь куда будут скомпилированны файлы (не указываем имя файла, так как вместо файла будет создана папка)
 	.pipe(browserSync.reload({stream: true})) //инжектит изменения в стилях в дом дереве 
-
-});
-
-gulp.task('scripts', function(){
-	return gulp.src([
-			'app/libs/jquery/dist/jquery.min.js',
-			'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
-			])
-	.pipe(concat('libs.min.js')) //создаёт минифицированный файл наших библиотек
-	.pipe(uglifyjs()) // далее запускаем минификацию нашего собранного js файла
-	.pipe(gulp.dest('app/js')) // указываем путь куда мы выгружаем собранный и сжатый файл
 });
 
 gulp.task('css-libs', ['sass'], function(){
@@ -39,6 +28,26 @@ gulp.task('css-libs', ['sass'], function(){
 	.pipe(rename({suffix: '.min'}))
 	.pipe(gulp.dest('app/css'));
 });
+
+gulp.task('scripts', function(){
+	return gulp.src([
+			'app/libs/jquery/dist/jquery.min.js',
+			'app/libs/magnific-popup/dist/jquery.magnific-popup.min.js',
+			'app/js/comman.js',
+			'app/js/carousel.js',
+			'app/js/collapse.js',
+			'app/js/dropdown.js',
+			'app/js/modal.js',
+			'app/js/tooltip.js',
+			'app/js/popover.js',
+			'app/js/common.js',
+			])
+	.pipe(concat('all.js')) //создаёт минифицированный файл наших библиотек
+	.pipe(uglifyjs('all.min.js')) // далее запускаем минификацию нашего собранного js файла
+	.pipe(gulp.dest('app/js/')) // указываем путь куда мы выгружаем собранный и сжатый файл
+});
+
+
 
 gulp.task('browser-sync', function(){
 	browserSync({
@@ -80,7 +89,10 @@ gulp.task('watch', ['browser-sync', 'css-libs', 'scripts', ], function(){ // в�
 	gulp.watch('app/js/**/*.js', browserSync.reload);
 });
 
-
+gulp.task('dist', ['browser-sync', 'css-libs', 'scripts', ], function(){ // всё что будет указанно в квадратных скобках - будет выполено до начала работы вотч
+	gulp.watch('dist/**/*.html', browserSync.reload);
+	gulp.watch('dist/js/**/*.js', browserSync.reload);
+});
 
 
 
@@ -96,7 +108,7 @@ gulp.task('build', ['clean', 'img', 'sass', 'scripts'], function(){
 		var buildFonts = gulp.src('app/fonts/**/*')
 		.pipe(gulp.dest('dist/fonts'));
 
-		var buildJS = gulp.src('app/js/**/*')
+		var buildJS = gulp.src('app/js/all.min.js')
 		.pipe(gulp.dest('dist/js'));
 
 		var buildHTML = gulp.src('app/*.html')
