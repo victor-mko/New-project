@@ -1,0 +1,8 @@
+.balance-box {
+  padding-top: 50px; }
+  .balance-box p {
+    color: #21c13b;
+    font-size: 32px;
+    font-weight: bold; }
+    .balance-box p i {
+      margin-right: 30px; }

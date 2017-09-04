@@ -1,0 +1,20 @@
+.search {
+    position: relative;
+    width: 190px;
+    height: 35px;
+    margin-right: 30px;
+    .input-field {
+        background: #eff1f3;
+        padding: 8px;
+        border: 1px solid #a6a6a6;
+    }
+    .button-image {
+        border: none;
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        background: url(../../../../image/musica-searcher.png) no-repeat center center;
+    }
+}

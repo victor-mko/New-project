@@ -1,0 +1,17 @@
+.invoice-block {
+  margin: 0 30px;
+  text-align: center; }
+  .invoice-block table {
+    width: 100%; }
+    .invoice-block table tr th, .invoice-block table tr td {
+      width: 15%; }
+    .invoice-block table tr th {
+      color: #a6a6a6;
+      font-size: 18px;
+      text-align: center;
+      padding-bottom: 5px; }
+    .invoice-block table tr .purpose {
+      width: 40%;
+      text-align: left; }
+    .invoice-block table .invoice-header {
+      border-bottom: 2px solid #a6a6a6; }

@@ -1,0 +1,33 @@
+.invoice-block {
+    margin: 0 30px;
+    text-align: center;
+    table {
+        width: 100%;
+        tr {
+            th, td {
+                width: 15%;
+            }
+            th {
+                color: #a6a6a6;
+                font-size: 18px;
+                text-align: center;
+                padding-bottom: 5px;
+            }
+            .purpose {
+                width: 40%;
+                text-align: left;
+            }
+        }
+        .invoice-header {
+            border-bottom: 2px solid #a6a6a6;
+            .date {
+            }
+            .total {
+            }
+            .target-group {
+            }
+            .settings {
+            }
+        }
+    }
+} 
