@@ -1,0 +1,24 @@
+.navBar {
+  width: 350px;
+  flex-shrink: 0;
+  height: 100vh;
+  text-align: center;
+  background-color: #2c374f;
+  .LogoBox {
+    background-color: #17b8be;
+    height: 70px;
+    line-height: 70px;
+    font-size: 28px;
+    a{
+      font-weight: bold;
+      color: white;
+      span {
+        color: black;
+      }
+    }
+  }
+  a {
+    color: white;
+  }
+}
+ 

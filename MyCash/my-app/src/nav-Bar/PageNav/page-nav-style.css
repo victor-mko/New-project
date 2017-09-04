@@ -1,0 +1,17 @@
+.page-box {
+  font-size: 20px;
+  text-align: left;
+  padding: 40px 0 0 30px; }
+  .page-box .page-link {
+    margin-bottom: 30px; }
+    .page-box .page-link a {
+      color: #bdbdbd;
+      text-indent: 65px;
+      line-height: 40px;
+      height: 40px;
+      display: block; }
+      .page-box .page-link a:hover {
+        color: white; }
+      .page-box .page-link a i {
+        left: -45px;
+        position: absolute; }

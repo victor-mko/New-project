@@ -1,0 +1,17 @@
+.header {
+  height: 70px;
+  line-height: 70px;
+  background-color: #eff1f3;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  justify-content: flex-end; }
+  .header div {
+    padding-right: 30px; }
+  .header .user-avatar {
+    margin-top: 5px;
+    border-radius: 40px; }
+    .header .user-avatar img {
+      width: 60px;
+      height: 60px;
+      border-radius: 30px; }

@@ -1,0 +1,11 @@
+.App {
+  margin: 0;
+  padding: 0;
+  display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+}
+
+*:focus {
+  outline: none;
+}

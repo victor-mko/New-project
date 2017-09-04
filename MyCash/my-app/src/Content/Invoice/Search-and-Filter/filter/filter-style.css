@@ -1,0 +1,15 @@
+.filter {
+  width: 174px;
+  background: #eff1f3;
+  padding: 0 8px;
+  height: 31px;
+  position: relative;
+  line-height: 33px;
+  text-align: left;
+  border: 1px solid #a6a6a6; }
+  .filter select {
+    background: transparent;
+    border: none;
+    top: 8px;
+    right: 8px;
+    position: absolute; }
