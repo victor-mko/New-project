@@ -9,7 +9,8 @@ class Invoice extends Component {
         return (
             <div className="invoice-block">
                 <SearchAndFilter />
-                <table > 
+                <table >
+                     <thead>
                     <tr className="invoice-header">
                         <th className="date">Date</th>
                         <th className="purpose">Purpose of payment</th>
@@ -17,6 +18,8 @@ class Invoice extends Component {
                         <th className="target-group">Target group</th>
                         <th className="settings">Settings</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     {
                         this.props.InvoiceArray.map(( el, index) => {
                             return (
@@ -24,6 +27,7 @@ class Invoice extends Component {
                             );
                         })
                     }
+                    </tbody>
                 </table>
             </div>
         );

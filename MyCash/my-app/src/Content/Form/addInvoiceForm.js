@@ -7,13 +7,24 @@ class Form extends Component {
         super(props);
         this.state = {
             costImputValue: "",
-            textInputValue: ""
+            textInputValue: "",
+            formValues: {
+                typeInvoice: "",
+                dateInvoice: "",
+                forWhatInvoice: "",
+                costInvoice: "",
+                whatInvoice: ""
+            }
         };
+        this.handleCostInputChange = this.handleCostInputChange.bind(this);
+        this.handleTextInputChange = this.handleTextInputChange.bind(this);
     }
 
 
     handleCostInputChange (event) {
-		this.setState({costImputValue: event.target.value});
+        let nnn = Object.assign({}, this.state.formValues, {costInvoice: event.target.value});
+        this.setState({formValues: nnn});
+        console.log(this.state.formValues);
     }
 
     handleTextInputChange (event) {
@@ -31,18 +42,18 @@ class Form extends Component {
                     <form action="">
                         <div className="type-invoice imput-box">
                             <i className=""></i>
-                            <select>
+                            <select className="typeInvoice">
                                 <option>Expenses</option>
                                 <option>Income</option>
                             </select>
                         </div>
                         <div className="date-invoice imput-box">
                             <i className=""></i>
-                            <a href="">19/08/2017</a>
+                            <a href="" className="dateInvoice">19/08/2017</a>
                         </div>
                         <div className="for-what-invoice imput-box">
                             <i className=""></i>
-                            <select>
+                            <select className="forWhatInvoice">
                                 <option>Food</option>
                                 <option>Transit</option>
                                 <option>Household chemicals</option>
@@ -57,9 +68,10 @@ class Form extends Component {
                             <i className=""></i>
                             <input 
                                 placeholder="Enter the spent sum"
-                                value={this.state.costImputValue}
+                                value={this.state.formValues.costInvoice}
                                 onChange={this.handleCostInputChange.bind(this)}
                                 type="text"
+                                className="costInvoice"
                             />
                         </div>
                         <div className="text-invoice imput-box">
@@ -69,6 +81,7 @@ class Form extends Component {
                                 value={this.state.textImputValue}
                                 onChange={this.handleTextInputChange.bind(this)}
                                 type="text"
+                                className="whatInvoice"
                             />
                         </div>
                     </form>

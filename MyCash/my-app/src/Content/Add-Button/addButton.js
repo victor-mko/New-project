@@ -5,9 +5,7 @@ class AddButton extends Component {
     render () {
         return (
             <div>
-                <a href="#" className="add-button" onClick={this.props.handleNewInvoiceAdd}>
-                    +
-                </a>
+                <button className="add-button" onClick={this.props.handleNewInvoiceAdd}>+</button>
             </div>
         );
     }
