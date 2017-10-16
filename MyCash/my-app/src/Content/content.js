@@ -15,7 +15,7 @@ class Content extends Component {
     
     constructor (props) {
         super(props);
-        this.handleNewInvoiceAdd = this.handleNewInvoiceAdd.bind(this);
+        
         this.state = {
             InvoiceArray: [
                 {
@@ -25,16 +25,25 @@ class Content extends Component {
                     targetGroup: "car",
                     settings: "aaaa",
                 }
-            ]
-        }
+            ],
+            visible: false
+        };
+        this.handleNewInvoiceAdd = this.handleNewInvoiceAdd.bind(this);
+        this.handleCloseOpenForm = this.handleCloseOpenForm.bind(this);
     }
 
     handleSendingData (event){
         
     }
 
+    handleCloseOpenForm () {
+        let newStateVisible = !this.state.visible;
+        this.setState({
+            visible: newStateVisible
+        })
+    }
+
     handleNewInvoiceAdd (event){
-        event.preventDefault();
         let newLine = [{
                     costDate: year + "." + month +"." + day, 
                     purpose: "gfaisyfugais", 
@@ -52,8 +61,8 @@ class Content extends Component {
             <div className="content" handleSendingData={this.handleSendingData}>
                 <Header /> 
                 <Invoice  InvoiceArray={this.state.InvoiceArray}/>
-                <AddButton handleNewInvoiceAdd={this.handleNewInvoiceAdd} />
-                <Form />
+                <AddButton handleNewInvoiceAdd={this.handleNewInvoiceAdd} handleCloseOpenForm={this.handleCloseOpenForm} />
+                <Form handleCloseOpenForm={this.handleCloseOpenForm} visible={this.state.visible}/>
             </div>
         );
     }

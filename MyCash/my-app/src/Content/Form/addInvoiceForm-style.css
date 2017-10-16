@@ -1,3 +1,6 @@
+.hide {
+  display: none; }
+
 .form-invoice-add {
   top: 0;
   position: absolute;
@@ -17,7 +20,14 @@
       height: 45px;
       line-height: 45px;
       text-align: center;
-      color: #21c13b; }
+      color: #21c13b;
+      position: relative; }
+      .form-invoice-add .form-box .form-header .closeFormButton {
+        position: absolute;
+        top: 2px;
+        right: 15px;
+        font-weight: bold;
+        cursor: pointer; }
     .form-invoice-add .form-box form {
       font-size: 14px;
       padding: 50px 30px 15px; }

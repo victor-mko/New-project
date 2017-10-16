@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./addInvoiceForm-style.css";
 
+
 class Form extends Component {
 
     constructor(props){
@@ -18,7 +19,7 @@ class Form extends Component {
         };
         this.handleCostInputChange = this.handleCostInputChange.bind(this);
         this.handleTextInputChange = this.handleTextInputChange.bind(this);
-    }
+    } 
 
 
     handleCostInputChange (event) {
@@ -30,14 +31,16 @@ class Form extends Component {
     handleTextInputChange (event) {
 		this.setState({textInputValue: event.target.value});
     }
-    
 
     render (){
         return (
-            <div className="form-invoice-add">
+            <div className={this.props.visible ? "form-invoice-add" : "hide"}>
                 <div className="form-box">
                     <div className="form-header">
                         Invoice
+                        <div className="closeFormButton" onClick={this.props.handleCloseOpenForm}>
+                        X
+                        </div>
                     </div>
                     <form action="">
                         <div className="type-invoice imput-box">
@@ -54,14 +57,14 @@ class Form extends Component {
                         <div className="for-what-invoice imput-box">
                             <i className=""></i>
                             <select className="forWhatInvoice">
-                                <option>Food</option>
-                                <option>Transit</option>
-                                <option>Household chemicals</option>
-                                <option>Clothing</option>
-                                <option>Appliances</option>
-                                <option>Entertainment</option>
-                                <option>Car</option>
-                                <option>Other</option>
+                                <option value="Food">Food</option>
+                                <option selected value="Transit">Transit</option>
+                                <option value="Household chemicals">Household chemicals</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Appliances">Appliances</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="Car">Car</option>
+                                <option value="Other">Other</option>
                             </select>
                         </div>
                         <div className="cost-invoice imput-box">
@@ -85,7 +88,7 @@ class Form extends Component {
                             />
                         </div>
                     </form>
-                    <button onClick={this.props.handleSendingData}>
+                    <button onClick={this.props.handleNewInvoiceAdd}>
                         +
                     </button>
                 </div>
