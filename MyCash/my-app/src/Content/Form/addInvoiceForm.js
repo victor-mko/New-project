@@ -2,34 +2,66 @@ import React, { Component } from "react";
 import "./addInvoiceForm-style.css";
 
 
+let date = new Date();
+let year = date.getUTCFullYear();
+let month = date.getUTCMonth() + 1;
+let day = date.getDate();
+
 class Form extends Component {
 
     constructor(props){
         super(props);
         this.state = {
-            costImputValue: "",
-            textInputValue: "",
-            formValues: {
-                typeInvoice: "",
-                dateInvoice: "",
-                forWhatInvoice: "",
-                costInvoice: "",
-                whatInvoice: ""
+            invoice: {
+                type: "",
+                date: day + "/" + month + "/" + year,
+                expensesType: "",
+                cost: "",
+                what: ""
             }
         };
-        this.handleCostInputChange = this.handleCostInputChange.bind(this);
-        this.handleTextInputChange = this.handleTextInputChange.bind(this);
+        this.handleInvoiceTypeChange = this.handleInvoiceTypeChange.bind(this);
+        this.handleInvoiceDateChange = this.handleInvoiceDateChange.bind(this);
+        this.handleWhatInputChange = this.handleWhatInputChange.bind(this);
+        this.handleCostChange = this.handleCostChange.bind(this);
+        this.handleExpensesTypeChange = this.handleExpensesTypeChange.bind(this);
+        this.handleAddItems = this.handleAddItems.bind(this);
     } 
-
-
-    handleCostInputChange (event) {
-        let nnn = Object.assign({}, this.state.formValues, {costInvoice: event.target.value});
-        this.setState({formValues: nnn});
-        console.log(this.state.formValues);
+    handleInvoiceTypeChange(event) {
+        let newStateValue = Object.assign({}, this.state.invoice, {type: event.target.value});
+        this.setState({invoice: newStateValue});
+    }
+    
+    handleInvoiceDateChange(event) {
+        let newStateValue = Object.assign({}, this.state.invoice, {date: event.target.value});
+        this.setState({invoice: newStateValue});
     }
 
-    handleTextInputChange (event) {
-		this.setState({textInputValue: event.target.value});
+    handleWhatInputChange (event) {
+		let newStateValue = Object.assign({}, this.state.invoice, {what: event.target.value});
+        this.setState({invoice: newStateValue});
+    }
+ 
+    handleCostChange(event) {
+        let newStateValue = Object.assign({}, this.state.invoice, {cost: event.target.value});
+        this.setState({invoice: newStateValue});
+    }
+
+    handleExpensesTypeChange (event) {
+        let newStateValue = Object.assign({}, this.state.invoice, {expensesType: event.target.value});
+        this.setState({invoice: newStateValue});
+    }
+
+    
+    handleSendingData (event){
+        event.preventDefault();
+
+    }
+
+
+    handleAddItems (event){
+        event.preventDefault();
+        this.props.handleNewInvoiceAdd(this.state.invoice);
     }
 
     render (){
@@ -39,26 +71,27 @@ class Form extends Component {
                     <div className="form-header">
                         Invoice
                         <div className="closeFormButton" onClick={this.props.handleCloseOpenForm}>
-                        X
+                            <span className="lt-br-line close-icon"></span>
+                            <span className="lb-tr-line close-icon"></span>
                         </div>
                     </div>
                     <form action="">
                         <div className="type-invoice imput-box">
                             <i className=""></i>
-                            <select className="typeInvoice">
+                            <select value={this.state.invoice.type} onChange={this.handleTypeChange} className="typeInvoice">
                                 <option>Expenses</option>
                                 <option>Income</option>
                             </select>
                         </div>
                         <div className="date-invoice imput-box">
                             <i className=""></i>
-                            <a href="" className="dateInvoice">19/08/2017</a>
+                            <a href="" className="dateInvoice">{day + "/" + month + "/" + year}</a>
                         </div>
                         <div className="for-what-invoice imput-box">
                             <i className=""></i>
-                            <select className="forWhatInvoice">
+                            <select value={this.state.invoice.expensesType} onChange={this.handleExpensesTypeChange} className="forWhatInvoice">
                                 <option value="Food">Food</option>
-                                <option selected value="Transit">Transit</option>
+                                <option value="Transit">Transit</option>
                                 <option value="Household chemicals">Household chemicals</option>
                                 <option value="Clothing">Clothing</option>
                                 <option value="Appliances">Appliances</option>
@@ -71,8 +104,8 @@ class Form extends Component {
                             <i className=""></i>
                             <input 
                                 placeholder="Enter the spent sum"
-                                value={this.state.formValues.costInvoice}
-                                onChange={this.handleCostInputChange.bind(this)}
+                                value={this.state.invoice.costInvoice}
+                                onChange={this.handleCostChange}
                                 type="text"
                                 className="costInvoice"
                             />
@@ -81,14 +114,14 @@ class Form extends Component {
                             <i className=""></i>
                             <input 
                                 placeholder="What bought?"
-                                value={this.state.textImputValue}
-                                onChange={this.handleTextInputChange.bind(this)}
+                                value={this.state.invoice.what}
+                                onChange={this.handleWhatInputChange}
                                 type="text"
                                 className="whatInvoice"
                             />
                         </div>
                     </form>
-                    <button onClick={this.props.handleNewInvoiceAdd}>
+                    <button onClick={this.handleAddItems}>
                         +
                     </button>
                 </div>

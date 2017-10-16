@@ -19,10 +19,11 @@ class Content extends Component {
         this.state = {
             InvoiceArray: [
                 {
-                    costDate: day + "/" + month + "/" + year,
-                    purpose: "used for emphasis with a following adjective functioning as an adverb.",
-                    total: 123,
-                    targetGroup: "car",
+                    type: "car",
+                    date: day + "/" + month + "/" + year,
+                    cost: 123,
+                    expensesType: "car",
+                    what: "used for emphasis with a following adjective functioning as an adverb.",
                     settings: "aaaa",
                 }
             ],
@@ -32,9 +33,6 @@ class Content extends Component {
         this.handleCloseOpenForm = this.handleCloseOpenForm.bind(this);
     }
 
-    handleSendingData (event){
-        
-    }
 
     handleCloseOpenForm () {
         let newStateVisible = !this.state.visible;
@@ -43,16 +41,16 @@ class Content extends Component {
         })
     }
 
-    handleNewInvoiceAdd (event){
+
+    handleNewInvoiceAdd (invoice){
         let newLine = [{
-                    costDate: year + "." + month +"." + day, 
-                    purpose: "gfaisyfugais", 
-                    total: 333,
-                    targetGroup: "home",
-                    settings: 3232,
-                }];
+                type: invoice.type,
+                date: invoice.date,
+                expensesType: invoice.expensesType,
+                cost: invoice.cost,
+                what: invoice.what
+            }];
         let newState = [...this.state.InvoiceArray, ...newLine];
-        console.log(this.state.InvoiceArray, newState);
         this.setState({InvoiceArray: newState});
     }
 
@@ -61,8 +59,8 @@ class Content extends Component {
             <div className="content" handleSendingData={this.handleSendingData}>
                 <Header /> 
                 <Invoice  InvoiceArray={this.state.InvoiceArray}/>
-                <AddButton handleNewInvoiceAdd={this.handleNewInvoiceAdd} handleCloseOpenForm={this.handleCloseOpenForm} />
-                <Form handleCloseOpenForm={this.handleCloseOpenForm} visible={this.state.visible}/>
+                <AddButton  handleCloseOpenForm={this.handleCloseOpenForm} />
+                <Form handleCloseOpenForm={this.handleCloseOpenForm} visible={this.state.visible} handleNewInvoiceAdd={this.handleNewInvoiceAdd}/>
             </div>
         );
     }

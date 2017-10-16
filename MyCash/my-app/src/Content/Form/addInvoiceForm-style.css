@@ -24,10 +24,25 @@
       position: relative; }
       .form-invoice-add .form-box .form-header .closeFormButton {
         position: absolute;
-        top: 2px;
-        right: 15px;
+        top: 13px;
+        right: 30px;
         font-weight: bold;
+        width: 20px;
+        height: 20px;
         cursor: pointer; }
+        .form-invoice-add .form-box .form-header .closeFormButton .close-icon {
+          width: 15px;
+          height: 2px;
+          position: relative;
+          background-color: red;
+          display: block; }
+        .form-invoice-add .form-box .form-header .closeFormButton .lt-br-line {
+          transform: rotate(45deg);
+          top: 7px;
+          width: 16px; }
+        .form-invoice-add .form-box .form-header .closeFormButton .lb-tr-line {
+          transform: rotate(-45deg);
+          top: 5px; }
     .form-invoice-add .form-box form {
       font-size: 14px;
       padding: 50px 30px 15px; }
