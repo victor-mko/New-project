@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./addInvoiceForm-style.css";
-
+import { connect } from "react-redux";
 
 let date = new Date();
 let year = date.getUTCFullYear();
@@ -20,50 +20,35 @@ class Form extends Component {
                 what: ""
             }
         };
-        this.handleInvoiceTypeChange = this.handleInvoiceTypeChange.bind(this);
-        this.handleInvoiceDateChange = this.handleInvoiceDateChange.bind(this);
-        this.handleWhatInputChange = this.handleWhatInputChange.bind(this);
-        this.handleCostChange = this.handleCostChange.bind(this);
-        this.handleExpensesTypeChange = this.handleExpensesTypeChange.bind(this);
-        this.handleAddItems = this.handleAddItems.bind(this);
     } 
-    handleInvoiceTypeChange(event) {
+    handleInvoiceTypeChange = (event) => {
         let newStateValue = Object.assign({}, this.state.invoice, {type: event.target.value});
         this.setState({invoice: newStateValue});
     }
-    
-    handleInvoiceDateChange(event) {
+    handleInvoiceDateChange = (event) => {
         let newStateValue = Object.assign({}, this.state.invoice, {date: event.target.value});
         this.setState({invoice: newStateValue});
     }
-
-    handleWhatInputChange (event) {
+    handleWhatInputChange = (event) => {
 		let newStateValue = Object.assign({}, this.state.invoice, {what: event.target.value});
         this.setState({invoice: newStateValue});
     }
- 
-    handleCostChange(event) {
+    handleCostChange = (event) => {
         let newStateValue = Object.assign({}, this.state.invoice, {cost: event.target.value});
         this.setState({invoice: newStateValue});
     }
-
-    handleExpensesTypeChange (event) {
+    handleExpensesTypeChange = (event) => {
         let newStateValue = Object.assign({}, this.state.invoice, {expensesType: event.target.value});
         this.setState({invoice: newStateValue});
     }
-
-    
-    handleSendingData (event){
+    handleSendingData = (event) => {
         event.preventDefault();
-
     }
-
-
-    handleAddItems (event){
+    handleAddItems = (event) => {
         event.preventDefault();
-        this.props.handleNewInvoiceAdd(this.state.invoice);
+        this.props.onAddItems(this.state.invoice);
+        this.props.handleCloseOpenForm();
     }
-
     render (){
         return (
             <div className={this.props.visible ? "form-invoice-add" : "hide"}>
@@ -130,4 +115,13 @@ class Form extends Component {
     }
 }
 
-export default Form;
+export default connect(
+    state => ({
+        invoiceArray: state
+    }),
+    dispatch => ({
+        onAddItems: (newInvoices) => {
+            dispatch({ type: "ADD_INVOICES", payload: newInvoices});
+        }
+    })
+)(Form);

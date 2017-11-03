@@ -29,8 +29,8 @@ class Page extends Component {
     render () {
         let pageLink = this.state.content.map((el, index) => {
                 return (
-                    <div className="page-link">
-                        <a href="" key={index}>
+                    <div className="page-link" key={index}>
+                        <a href="" >
                             <i className={el.iconClassName}></i>
 							{el.text}
 						</a>

@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./header-style.css";
 import "../../scss/fonts.css";
-import Avatar from "../../image/Avatar.jpg";
+import AvatarDefault from "../../image/AvatarDefault.jpg";
 
 
 class UserName extends Component {
     render () {
         return (
             <div className="user-name">
-                <p>Viktor Mihailenko</p>
+                <p id="userName" >User Name</p>
             </div>
         );
     }
@@ -18,7 +18,7 @@ class UserAvatar extends Component {
     render () {
         return (
             <div className="user-avatar">
-                <img src={Avatar} alt={"Viktor Mykhailenko"}/>
+                <img id="userAvatar" src={AvatarDefault} alt={"Viktor Mykhailenko"}/>
             </div>
         );
     }

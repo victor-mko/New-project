@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./invoice-style.css";
 import CostItem from "./cost-item.js";
 import SearchAndFilter from "./Search-and-Filter/search-and-filter.js";
+import { connect } from 'react-redux';
 
 
 class Invoice extends Component {
@@ -21,9 +22,9 @@ class Invoice extends Component {
                     </thead>
                     <tbody>
                     {
-                        this.props.InvoiceArray.map(( el, index) => {
+                            this.props.invoiceArray.map(( el, index) => {
                             return (
-                                <CostItem InvoiceArray = {el}/>
+                                <CostItem key={index} invoiceArray = {el}/>
                             );
                         })
                     }
@@ -34,4 +35,9 @@ class Invoice extends Component {
     }
 }
 
-export default Invoice;
+export default connect (
+    state => ({
+        invoiceArray: state
+    }),
+    dispatch => ({})
+)(Invoice);

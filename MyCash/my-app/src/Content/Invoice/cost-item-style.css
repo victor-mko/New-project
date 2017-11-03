@@ -1,2 +1,6 @@
-.cost-item td {
-  padding-top: 30px; }
+.cost-item {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px; }
+  .cost-item td {
+    padding-top: 30px;
+    padding-bottom: 5px; }

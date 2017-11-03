@@ -4,7 +4,7 @@ import "./cost-item-style.css";
 class CostItem extends Component {
 
     render () {
-        let { date, what, cost, expensesType } = this.props.InvoiceArray;
+        let { date, what, cost, expensesType } = this.props.invoiceArray;
         return (
             <tr className="cost-item">
                 <td className="date">{date}</td>
